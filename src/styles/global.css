@@ -1,3 +1,6 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
 /*
   The CSS in this style tag is based off of Bear Blog's default CSS.
   https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
@@ -5,8 +8,12 @@
  */
 
 :root {
-	--accent: #2337ff;
 	--accent-dark: #000d8a;
+	--monokai-black: #2e2e2e;
+	--monokai-white: #d6d6d6;
+	--monokai-comment: #797979;
+	--monokai-blue: #6c99bb;
+	--monokai-pink: #b05279;
 	--black: 15, 18, 25;
 	--gray: 96, 115, 159;
 	--gray-light: 229, 233, 240;
@@ -35,11 +42,11 @@ body {
 	margin: 0;
 	padding: 0;
 	text-align: left;
-	background: linear-gradient(var(--gray-gradient)) no-repeat;
+	background: var(--monokai-black);
 	background-size: 100% 600px;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
-	color: rgb(var(--gray-dark));
+	color: var(--monokai-white);
 	font-size: 20px;
 	line-height: 1.7;
 }
@@ -49,47 +56,51 @@ main {
 	margin: auto;
 	padding: 3em 1em;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	margin: 0 0 0.5rem 0;
-	color: rgb(var(--black));
-	line-height: 1.2;
-}
-h1 {
-	font-size: 3.052em;
-}
-h2 {
-	font-size: 2.441em;
-}
-h3 {
-	font-size: 1.953em;
-}
-h4 {
-	font-size: 1.563em;
-}
-h5 {
-	font-size: 1.25em;
+
+/* 放在 @layer base 內，讓 prose 修飾器能覆蓋 prose 內的標題 */
+@layer base {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin: 0 0 0.5rem 0;
+		color: rgb(var(--monokai-comment));
+		line-height: 1.2;
+	}
+	h1 {
+		font-size: 3.052em;
+	}
+	h2 {
+		font-size: 2.441em;
+	}
+	h3 {
+		font-size: 1.953em;
+	}
+	h4 {
+		font-size: 1.563em;
+	}
+	h5 {
+		font-size: 1.25em;
+	}
 }
 strong,
 b {
 	font-weight: 700;
 }
 a {
-	color: var(--accent);
+	color: var(--monokai-blue);
 }
 a:hover {
-	color: var(--accent);
+	color: var(--monokai-blue);
 }
 p {
 	margin-bottom: 1em;
 }
-.prose p {
+/* .prose p {
 	margin-bottom: 2em;
-}
+} */
 textarea {
 	width: 100%;
 	font-size: 16px;
@@ -107,7 +118,7 @@ img {
 }
 code {
 	padding: 2px 5px;
-	background-color: rgb(var(--gray-light));
+	background-color: ; /* light background than background color*/
 	border-radius: 2px;
 }
 pre {
@@ -118,7 +129,7 @@ pre > code {
 	all: unset;
 }
 blockquote {
-	border-left: 4px solid var(--accent);
+	border-left: 4px solid var(--monokai-blue);
 	padding: 0 0 0 20px;
 	margin: 0;
 	font-size: 1.333em;
