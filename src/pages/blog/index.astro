@@ -43,9 +43,6 @@ const posts = (await getCollection('blog')).sort(
 				margin: 0;
 				color: rgb(var(--monokai-comment));
 			}
-			ul a:hover img {
-				box-shadow: var(--box-shadow);
-			}
 			@media (max-width: 720px) {
 				ul {
 					gap: 0.5em;
@@ -68,9 +65,6 @@ const posts = (await getCollection('blog')).sort(
 						posts.map((post) => (
 							<li>
 								<a href={`/blog/${post.id}/`}>
-									{post.data.heroImage && (
-										<Image width={50} src={post.data.heroImage} alt="" />
-									)}
 									<p class="date">
 										{post.data.title}-<FormattedDate date={post.data.pubDate} />
 									</p>
