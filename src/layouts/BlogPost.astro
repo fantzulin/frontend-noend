@@ -47,6 +47,9 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			.prose {
 				color: var(--monokai-white);
 			}
+			.prose :global(h2,h3) {
+				color: var(--monokai-white)
+			}
 			.prose :global(h2) {
 				color: var(--monokai-white)
 				font-size: 1.563em;
