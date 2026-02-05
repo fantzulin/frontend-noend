@@ -1,0 +1,76 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Chris</h1>
+            <h3>前端工程師</h3>
+            <a href="https://app.zap-pilot.org/" target="_blank">
+                Zap Pilot
+            </a>
+            <p>負責 DeFi 應用介面開發、第三方 API 整合、合約互動與部分後端 API 設計。</p>
+            <ul>
+                <li>錢包登入整合（RainbowKit、wagmi、viem）</li>
+                <li>合約互動（approve、deposit、withdraw）</li>
+                <li>DeFi 數據串接（DefiLlama API）</li>
+                <li>儀表板資料呈現與效能優化</li>
+                <li>單元測試與自動化測試（Vitest + GitHub Actions）</li>
+            </ul>
+            <br>
+            <a href="https://gaintrack-am9z.vercel.app/" target="_blank">
+                GainTrack
+            </a>
+            <p>個人開發追蹤錢包收益的 Dapp。</p>
+            <ul>
+                <li>UI/UX 設計與頁面規劃</li>
+                <li>實作錢包登入流程與跨鏈資料讀取</li>
+                <li>串接 DeFi API 與自建 Node.js</li>
+                <li>Google Sheet API 用戶紀錄系統</li>
+                <li>Loading / Empty states、錯誤監控與資料呈現</li>
+                <li>單元測試與 CI 流程</li>
+                <li>這個專案讓我從零開始規劃一個完整前端架構，也讓我對 Web3 產品邏輯、資料流動、使用者引導有更深刻的理解。</li>
+            </ul>
+            <br>
+            <a href="https://humandesign-tw.com/" target="_blank">
+                人類圖畫館
+            </a>
+            <p>人類圖課程購物網站，負責網站前端實作，網站前後台系統介面。</p>
+            <ul>
+                <li>網站前台介面製作，與後端串接購物車等資料</li>
+                <li>網站後台介面製作，與後端串接網站內容以及產品上架等資料</li>
+            </ul>
+            <br>
+            <a href="https://face8.ai/" target="_blank">
+                Face8
+            </a>
+            <p>公司官方網站以及 Sass 產品服務網頁介面製作。</p>
+            <ul>
+                <li>人臉辨識考勤系統網頁介面製作</li>
+                <li>營建業人臉管制系統網頁介面製作</li>
+                <li>健身業人臉管制系統網頁介面製作</li>
+            </ul>
+            <br>
+            <a href="https://www.papagoinc.com/" target="_blank">
+                PAPAGO!
+            </a>
+            <p>公司官方網站以及產品網頁設計。 </p>
+            <ul>
+                <li>官方網站網頁設計排版</li>
+                <li>主要使用 HTML/CSS/JS 製作</li>
+                <li>網頁排版響應 RWD 設計，適應各裝置瀏覽</li>
+                <li>協助網站 SEO 的設定，優化網站搜尋排名</li>
+            </ul>
+		</main>
+		<Footer />
+	</body>
+</html>
