@@ -61,6 +61,9 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			.prose :global(a) {
 				text-decoration: none; 
 			}
+			.prose :global(ol>li::marker) {
+				color: var(--monokai-white);
+			}
 		</style>
 	</head>
 

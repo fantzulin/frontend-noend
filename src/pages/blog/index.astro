@@ -20,7 +20,6 @@ const posts = (await getCollection('blog')).sort(
 			ul {
 				display: flex;
 				flex-wrap: wrap;
-				gap: 2rem;
 				list-style-type: none;
 				margin: 0;
 				padding: 0;
@@ -63,10 +62,14 @@ const posts = (await getCollection('blog')).sort(
 				<ul>
 					{
 						posts.map((post) => (
-							<li>
-								<a href={`/blog/${post.id}/`}>
+							<li class="flex">
+								<FormattedDate date={post.data.pubDate} />
+								<a
+									href={`/blog/${post.id}/`}
+									class="ml-2"
+								>
 									<p class="date">
-										{post.data.title}-<FormattedDate date={post.data.pubDate} />
+										{post.data.title}
 									</p>
 								</a>
 							</li>
