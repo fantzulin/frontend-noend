@@ -14,15 +14,20 @@ import HeaderLink from './HeaderLink.astro';
 	</nav>
 </header>
 <style>
+	@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
 	header {
 		width: 720px;
 		max-width: calc(100% - 2em);
 		margin: auto;
 		box-shadow: 0 2px 8px rgba(var(--black), 5%);
 	}
-	h2 {
+	nav h2 {
 		margin: 0;
-		font-size: 1em;
+		font-size: 1.2em;
+		font-family: "Racing Sans One", system-ui;
+		font-weight: 400;
+		font-style: normal;
+		line-height: 1.7;
 	}
 
 	h2 a,
@@ -41,6 +46,6 @@ import HeaderLink from './HeaderLink.astro';
 	}
 	nav a.active {
 		text-decoration: none;
-		border-bottom-color: var(--monokai-pink);
+		border-bottom-color: var(--monokai-blue);
 	}
 </style>
